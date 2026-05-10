@@ -5,21 +5,21 @@
 class Cogni < Formula
   desc "MCP server for AI coding agents — structured repo recall with 40-60% token reduction"
   homepage "https://getcogni.dev"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/islamborghini/cogni/releases/download/v0.1.0/cogni_darwin_amd64.tar.gz"
-      sha256 "e930991151f9c765932b60375722ac4ff4e3c26fc753f82929e70642d4f385f9"
+      url "https://github.com/islamborghini/cogni/releases/download/v0.1.1/cogni_darwin_amd64.tar.gz"
+      sha256 "a026bc04b51f085e9c499e9ddde03584d8e1b33783be71d127ecff3153f1886c"
 
       define_method(:install) do
         bin.install "cogni"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/islamborghini/cogni/releases/download/v0.1.0/cogni_darwin_arm64.tar.gz"
-      sha256 "972021babf9870686c420605f87b1586be7fef04edce9ca2e915443569fe4f66"
+      url "https://github.com/islamborghini/cogni/releases/download/v0.1.1/cogni_darwin_arm64.tar.gz"
+      sha256 "669a2307d48d72614e0dab79c9e4f13a38ca1b214e0872b2e56abe3c864fe975"
 
       define_method(:install) do
         bin.install "cogni"
@@ -29,15 +29,15 @@ class Cogni < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/islamborghini/cogni/releases/download/v0.1.0/cogni_linux_amd64.tar.gz"
-      sha256 "ec846cf0fd6a9d5f2aaa858a98e75cb24e7405c1e5b9a50e144bd9521386411b"
+      url "https://github.com/islamborghini/cogni/releases/download/v0.1.1/cogni_linux_amd64.tar.gz"
+      sha256 "253655846b25c133c919c0895bbac2ee1e7d9eebb8fbd1f148afc671a9bf23fa"
       define_method(:install) do
         bin.install "cogni"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/islamborghini/cogni/releases/download/v0.1.0/cogni_linux_arm64.tar.gz"
-      sha256 "d9c4756d0a87a5ba00c83a4454eb8abbc7c6e9da2822edb816f69de66c8bb0b9"
+      url "https://github.com/islamborghini/cogni/releases/download/v0.1.1/cogni_linux_arm64.tar.gz"
+      sha256 "e31c8ca7173c751c7153e924ea4939763b63e1711358d8bda1e3048ab877a7fe"
       define_method(:install) do
         bin.install "cogni"
       end
