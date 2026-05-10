@@ -11,7 +11,7 @@ class Cogni < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/islamborghini/cogni/releases/download/v0.1.0/cogni_darwin_amd64.tar.gz"
-      sha256 "7b07d8ea86d5f38de7209c637a0446058e4a9b657138a2f6128339b4454be994"
+      sha256 "5e7944cdaa22dfb2d5122f612079de7f2f46c566c6a46c7b9e3d26e8bb2335e5"
 
       define_method(:install) do
         bin.install "cogni"
@@ -19,7 +19,7 @@ class Cogni < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/islamborghini/cogni/releases/download/v0.1.0/cogni_darwin_arm64.tar.gz"
-      sha256 "1395b80e19e5728d2deb35bb2bbd7cbc44a056d7e75c56828ce65538e3db5e47"
+      sha256 "cc91968b01da061c8751368f18164c0a548fb4a7241b0c7e7c2b4601fd31667e"
 
       define_method(:install) do
         bin.install "cogni"
@@ -30,14 +30,14 @@ class Cogni < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/islamborghini/cogni/releases/download/v0.1.0/cogni_linux_amd64.tar.gz"
-      sha256 "8f5020d689f96f28c11de807ae3c4e39a73b59f091d09b9ed7a54f6ab2f615bf"
+      sha256 "2157a0db9c549e6ba849b81b09ca4690a41be9c861f2661a8e30a41d962b8653"
       define_method(:install) do
         bin.install "cogni"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/islamborghini/cogni/releases/download/v0.1.0/cogni_linux_arm64.tar.gz"
-      sha256 "257812b9d12346361458b4edea454cdfcc9b57b2b0aa65ccf8b55ea6c298d0a3"
+      sha256 "da4c1d62112010230dbf9dcf958ada268e62f19e2114517269558a029f813645"
       define_method(:install) do
         bin.install "cogni"
       end
